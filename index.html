@@ -112,9 +112,6 @@
   }
   .lockup { display: flex; align-items: center; gap: 12px; }
   .lockup svg { width: 46px; height: auto; flex: none; }
-  /* Bigger once there is room for it; 46px is right on a phone. */
-  @media (min-width: 700px) { .lockup svg { width: 68px; } }
-  @media (min-width: 700px) { .lockup b { font-size: 1.42rem; } }
   .lockup b {
     font-family: var(--display);
     font-weight: 700;
@@ -122,6 +119,9 @@
     letter-spacing: .01em;
     color: var(--ink);
   }
+  /* Bigger once there is room for it; 46px is right on a phone. */
+  @media (min-width: 700px) { .lockup svg { width: 68px; } }
+  @media (min-width: 700px) { .lockup b { font-size: 1.42rem; } }
   .top .eyebrow { text-align: right; }
 
   /* ---------- hero ---------- */
