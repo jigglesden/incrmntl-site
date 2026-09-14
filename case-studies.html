@@ -113,6 +113,18 @@
   .lever-mn .code { background:#4E9B6A; color:#FCFBF7; }
   .lever-tl .code { background:var(--outcome); color:#0C3B32; }
   .who { align-items:center; }
+
+  /* The client's own mark, used as supplied. The brand rules say never
+     recolour the scribble, and ship a paper variant for dark grounds, so the
+     theme swaps the file rather than restyling the artwork. */
+  .clientmark { height:40px; width:auto; display:block; margin-bottom:10px; }
+  .clientmark.paper { display:none; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .clientmark.ink { display:none; }
+    :root:not([data-theme="light"]) .clientmark.paper { display:block; }
+  }
+  :root[data-theme="dark"] .clientmark.ink { display:none; }
+  :root[data-theme="dark"] .clientmark.paper { display:block; }
 </style>
 </head>
 <body>
@@ -265,6 +277,8 @@
     </article>
 
     <article class="case">
+      <img class="clientmark ink" src="/img/cognito-mark-ink.svg" alt="" width="220" height="90">
+      <img class="clientmark paper" src="/img/cognito-mark-paper.svg" alt="" width="220" height="90">
       <h2>Cognito Crayons</h2>
       <p class="who"><span class="tag">In progress</span><span>Costing, brand, storefront</span><span class="lever lever-tl"><span class="code">TL</span><span class="word">Total Leverage</span></span></p>
 
