@@ -97,6 +97,22 @@
   footer { margin-top:clamp(44px,6vw,72px); border-top:1px solid var(--rule); padding-block:22px 40px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; }
   footer p { margin:0; font-size:.9rem; color:var(--muted); }
   footer a { color:var(--muted); }
+
+  /* The four levers, drawn the way the mark draws them: the sequence deepens
+     through the greens and lands on amber. Same colours as the home page, so
+     a reader who scrolled the ladder recognises them here. */
+  .lever { display:inline-flex; align-items:center; gap:8px; }
+  .lever .code {
+    font-family:var(--display); font-size:.78rem; font-weight:700;
+    letter-spacing:.06em; width:30px; height:30px; border-radius:6px;
+    display:inline-grid; place-items:center; flex:none;
+  }
+  .lever .word { font-family:var(--display); font-size:.73rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+  .lever-in .code { background:#9ACFAE; color:#0C3B32; }
+  .lever-cr .code { background:#74B98B; color:#0C3B32; }
+  .lever-mn .code { background:#4E9B6A; color:#FCFBF7; }
+  .lever-tl .code { background:var(--outcome); color:#0C3B32; }
+  .who { align-items:center; }
 </style>
 </head>
 <body>
@@ -144,7 +160,7 @@
 
     <article class="case">
       <h2>Selling a quote as a product</h2>
-      <p class="who"><span>MyDressbox</span><span>Product strategy</span><span>CR</span></p>
+      <p class="who"><span>MyDressbox</span><span>Product strategy</span><span class="lever lever-cr"><span class="code">CR</span><span class="word">Commercial</span></span></p>
 
       <div class="beat">
         <p class="label">Problem</p>
@@ -190,7 +206,7 @@
 
     <article class="case">
       <h2>Dress|OS</h2>
-      <p class="who"><span>MyDressbox</span><span>Systems</span><span>TL</span></p>
+      <p class="who"><span>MyDressbox</span><span>Systems</span><span class="lever lever-tl"><span class="code">TL</span><span class="word">Total Leverage</span></span></p>
 
       <div class="beat">
         <p class="label">Problem</p>
@@ -250,7 +266,7 @@
 
     <article class="case">
       <h2>Cognito Crayons</h2>
-      <p class="who"><span class="tag">In progress</span><span>Costing, brand, storefront</span><span>TL</span></p>
+      <p class="who"><span class="tag">In progress</span><span>Costing, brand, storefront</span><span class="lever lever-tl"><span class="code">TL</span><span class="word">Total Leverage</span></span></p>
 
       <div class="beat">
         <p class="label">Problem</p>
@@ -284,6 +300,17 @@
         <figure>
           <img src="/img/crayos-cost.jpg" alt="Cray OS recipe cost build up: ingredients and batch weight, then batch yield, then time, labour and reject rate" loading="lazy" width="1096" height="780">
           <figcaption>One recipe costed properly. Ingredients build the batch, batch yield gives cost per crayon, then setup, manufacture, QC and reject rate go on top. Costs blurred.</figcaption>
+        </figure>
+      </div>
+
+      <div class="shots">
+        <figure>
+          <img src="/img/cognito-site.jpg" alt="Cognito Crayons storefront home page, with the headline Crayons that grow with little hands and three columns explaining the hex shape, the stage sheets and graduation" loading="lazy" width="1097" height="1040">
+          <figcaption>The storefront. Two entry points off the hero, one for a parent and one for an educator, because they are not the same sale.</figcaption>
+        </figure>
+        <figure>
+          <img src="/img/cognito-product.jpg" alt="Three hexagonal crayons in yellow, blue and green beside a paper-wrapped block, on a woven flax mat" loading="lazy" width="900" height="900">
+          <figcaption>The product the brand has to carry. Six flats, twenty millimetres, hand poured.</figcaption>
         </figure>
       </div>
 
