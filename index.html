@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="INCRMNTL helps businesses find the growth levers that matter, then turn them into better pricing, stronger offers, smarter marketing and measurable growth.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="INCRMNTL">
+<meta property="og:description" content="Small changes. Bigger outcomes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://incrmntl.co/">
+<title>INCRMNTL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Literata:opsz,wght@7..72,400;7..72,500&display=swap">
+<style>
+  /* Palette is the brand pack's, not invented: deep/mid/light green, amber,
+     blue-gray, warm off-white. Amber means "the outcome" in the mark, so it
+     appears exactly twice on this page - on TL, and on the one CTA. */
+  :root {
+    --ground:    #FCFBF7;
+    --surface:   #F4F2EA;
+    --ink:       #0C3B32;
+    --body:      #2C4A43;
+    --muted:     #4F6B8A;
+    --rule:      #DEDACE;
+    --node-1:    #9ACFAE;
+    --node-2:    #74B98B;
+    --node-3:    #4E9B6A;
+    --outcome:   #F5A623;
+    --on-accent: #0C3B32;
+
+    --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --serif: "Literata", Georgia, "Times New Roman", serif;
+
+    --step: clamp(1.6rem, 1.1rem + 2.2vw, 2.9rem);
+    --measure: 62ch;
+  }
+
+  :root:not([data-theme="light"]) { }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:    #071E1A;
+      --surface:   #0C3B32;
+      --ink:       #FCFBF7;
+      --body:      #CFE0D8;
+      --muted:     #9DB6CE;
+      --rule:      #17453B;
+      --node-1:    #3E6E5A;
+      --node-2:    #4E9B6A;
+      --node-3:    #74B98B;
+      --outcome:   #F5A623;
+      --on-accent: #071E1A;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:    #071E1A;
+    --surface:   #0C3B32;
+    --ink:       #FCFBF7;
+    --body:      #CFE0D8;
+    --muted:     #9DB6CE;
+    --rule:      #17453B;
+    --node-1:    #3E6E5A;
+    --node-2:    #4E9B6A;
+    --node-3:    #74B98B;
+    --outcome:   #F5A623;
+    --on-accent: #071E1A;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--body);
+    font-family: var(--serif);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding-inline: 24px;
+  }
+  @media (max-width: 560px) { .wrap { padding-inline: 18px; } }
+
+  h1, h2, h3, .code, .eyebrow, .btn {
+    font-family: var(--display);
+    color: var(--ink);
+    text-wrap: balance;
+  }
+
+  .eyebrow {
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  /* ---------- masthead ---------- */
+  header.top {
+    padding-block: 28px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .lockup { display: flex; align-items: center; gap: 12px; }
+  .lockup svg { width: 46px; height: auto; flex: none; }
+  .lockup b {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 1.18rem;
+    letter-spacing: .01em;
+    color: var(--ink);
+  }
+  .top .eyebrow { text-align: right; }
+
+  /* ---------- hero ---------- */
+  .hero { padding-block: clamp(40px, 7vw, 84px) clamp(32px, 5vw, 56px); }
+
+  .hero h1 {
+    font-size: clamp(2.4rem, 1.3rem + 4.4vw, 4.4rem);
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -.02em;
+    margin: 0 0 20px;
+  }
+  .hero h1 .soft { color: var(--muted); font-weight: 500; }
+
+  .lede {
+    font-size: clamp(1.08rem, 1rem + .4vw, 1.3rem);
+    max-width: var(--measure);
+    margin: 0 0 28px;
+  }
+
+  /* The wordmark, split the way the practice is. Every other brand would
+     print its name; this one can show that the name is the method. */
+  .split {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 30px;
+  }
+  .split span {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(1.5rem, .9rem + 2.4vw, 2.6rem);
+    letter-spacing: .04em;
+    padding: 4px 12px 5px;
+    border-radius: 3px;
+    color: var(--ground);
+    animation: settle .5s cubic-bezier(.2,.7,.3,1) both;
+  }
+  .split span:nth-child(1) { background: var(--node-1); color: var(--ink); animation-delay: .05s; }
+  .split span:nth-child(2) { background: var(--node-2); color: var(--ink); animation-delay: .17s; }
+  .split span:nth-child(3) { background: var(--node-3); animation-delay: .29s; }
+  .split span:nth-child(4) { background: var(--outcome); color: var(--on-accent); animation-delay: .41s; }
+
+  @keyframes settle {
+    from { opacity: 0; transform: translateY(9px); }
+    to   { opacity: 1; transform: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .split span { animation: none; }
+  }
+
+  .split-note {
+    font-size: .95rem;
+    color: var(--muted);
+    max-width: var(--measure);
+    margin: 0;
+  }
+
+  /* ---------- the ladder ---------- */
+  .ladder { padding-block: clamp(32px, 5vw, 56px); }
+
+  .tier {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: 0 28px;
+    padding-block: 30px;
+    border-top: 1px solid var(--rule);
+    align-items: start;
+  }
+  @media (max-width: 620px) {
+    .tier { grid-template-columns: 1fr; gap: 14px; }
+  }
+
+  /* The code is the node. It deepens down the page, so reading the page is
+     the trajectory the mark draws. */
+  .code {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    display: inline-grid;
+    place-items: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    color: var(--ground);
+  }
+  .t1 .code { background: var(--node-1); color: var(--ink); }
+  .t2 .code { background: var(--node-2); color: var(--ink); }
+  .t3 .code { background: var(--node-3); }
+  .t4 .code { background: var(--outcome); color: var(--on-accent); }
+
+  .tier h2 {
+    font-size: var(--step);
+    font-weight: 600;
+    letter-spacing: -.015em;
+    line-height: 1.12;
+    margin: 0 0 6px;
+  }
+  .tier .what {
+    font-size: 1.08rem;
+    font-style: italic;
+    color: var(--muted);
+    margin: 0 0 16px;
+    max-width: var(--measure);
+  }
+  .tier ul {
+    margin: 0 0 16px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    max-width: 640px;
+  }
+  .tier li {
+    font-family: var(--display);
+    font-size: .83rem;
+    font-weight: 500;
+    color: var(--body);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 4px 11px;
+  }
+  .outcome {
+    margin: 0;
+    max-width: var(--measure);
+  }
+  .outcome b {
+    font-family: var(--display);
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  /* ---------- the argument ---------- */
+  .argument {
+    background: var(--surface);
+    border-radius: 4px;
+    padding: clamp(24px, 4vw, 40px);
+    margin-block: clamp(28px, 4vw, 48px);
+  }
+  .argument p {
+    margin: 0;
+    max-width: var(--measure);
+    font-size: 1.12rem;
+  }
+  .argument p + p { margin-top: 14px; }
+  .argument .eyebrow { margin-bottom: 10px; }
+
+  .flow {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 1.02rem;
+    letter-spacing: .06em;
+    color: var(--ink);
+    margin: 0 0 14px;
+  }
+  .flow span { color: var(--muted); padding-inline: 4px; }
+
+  /* ---------- close ---------- */
+  .close { padding-block: clamp(36px, 5vw, 64px) 0; }
+  .close h2 {
+    font-size: clamp(1.7rem, 1.2rem + 2vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: -.02em;
+    margin: 0 0 14px;
+  }
+  .close p { max-width: var(--measure); margin: 0 0 24px; }
+
+  .btn {
+    display: inline-block;
+    background: var(--outcome);
+    color: var(--on-accent);
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: .01em;
+    text-decoration: none;
+    padding: 13px 26px;
+    border-radius: 3px;
+  }
+  .btn:hover { filter: brightness(1.06); }
+  .btn:focus-visible { outline: 3px solid var(--muted); outline-offset: 3px; }
+
+  footer {
+    margin-top: clamp(48px, 7vw, 88px);
+    border-top: 1px solid var(--rule);
+    padding-block: 22px 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  footer p { margin: 0; font-size: .9rem; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="top">
+    <div class="lockup">
+      <svg viewBox="0 0 360 220" role="img" aria-label="INCRMNTL">
+        <path d="M45 170 C105 160 125 145 165 125 C205 105 235 95 285 55" fill="none" stroke="#4E9B6A" stroke-width="14" stroke-linecap="round"/>
+        <circle cx="55" cy="168" r="15" fill="#9ACFAE"/>
+        <circle cx="120" cy="148" r="22" fill="#74B98B"/>
+        <circle cx="195" cy="118" r="28" fill="#0C3B32"/>
+        <circle cx="285" cy="55" r="36" fill="#F5A623"/>
+        <line x1="318" y1="28" x2="338" y2="12" stroke="#F5A623" stroke-width="8" stroke-linecap="round"/>
+        <line x1="322" y1="55" x2="347" y2="55" stroke="#F5A623" stroke-width="8" stroke-linecap="round"/>
+        <line x1="307" y1="17" x2="311" y2="0" stroke="#F5A623" stroke-width="8" stroke-linecap="round"/>
+      </svg>
+      <b>INCRMNTL</b>
+    </div>
+    <p class="eyebrow">Growth &amp; transformation</p>
+  </header>
+
+  <section class="hero">
+    <h1>Small changes.<br><span class="soft">Bigger outcomes.</span></h1>
+    <p class="lede">
+      Most businesses that want to grow don't need more things to do. They need
+      to know which few changes will actually matter. INCRMNTL finds those,
+      then helps make them.
+    </p>
+
+    <div class="split" aria-hidden="true">
+      <span>IN</span><span>CR</span><span>MN</span><span>TL</span>
+    </div>
+    <p class="split-note">
+      The name is the method. Four stages — Insight, Commercial, Marketing,
+      Total&nbsp;Leverage — in the order a business should take them.
+    </p>
+  </section>
+
+  <section class="ladder" aria-label="Services">
+
+    <article class="tier t1">
+      <p class="code">IN</p>
+      <div>
+        <h2>Insight</h2>
+        <p class="what">Understand the business before changing it.</p>
+        <ul>
+          <li>Website &amp; Shopify review</li>
+          <li>Analytics &amp; conversion</li>
+          <li>Customer journey</li>
+          <li>Positioning &amp; competitors</li>
+          <li>Opportunity mapping</li>
+          <li>Prioritised recommendations</li>
+        </ul>
+        <p class="outcome">
+          <b>Outcome</b>
+          Know where growth is being lost, and where the best opportunities sit.
+          Delivered as a fixed-fee review, a workshop and report, or a 30/60/90-day plan.
+        </p>
+      </div>
+    </article>
+
+    <article class="tier t2">
+      <p class="code">CR</p>
+      <div>
+        <h2>Commercial</h2>
+        <p class="what">Improve the economics and the offer.</p>
+        <ul>
+          <li>Pricing strategy</li>
+          <li>Offer structure</li>
+          <li>Margin review</li>
+          <li>Packaging &amp; bundling</li>
+          <li>Product &amp; service mix</li>
+          <li>Revenue model</li>
+        </ul>
+        <p class="outcome">
+          <b>Outcome</b>
+          Improve what the business sells, how it sells it, and the value it
+          keeps. Run as a commercial strategy sprint.
+        </p>
+      </div>
+    </article>
+
+    <article class="tier t3">
+      <p class="code">MN</p>
+      <div>
+        <h2>Marketing</h2>
+        <p class="what">Build or improve the growth engine.</p>
+        <ul>
+          <li>Fractional marketing leadership</li>
+          <li>Channel strategy</li>
+          <li>Campaign planning</li>
+          <li>CRO</li>
+          <li>Lifecycle &amp; retention</li>
+          <li>Agency management</li>
+          <li>Team training</li>
+        </ul>
+        <p class="outcome">
+          <b>Outcome</b>
+          A repeatable system for generating and converting demand — not a
+          campaign that works once.
+        </p>
+      </div>
+    </article>
+
+    <article class="tier t4">
+      <p class="code">TL</p>
+      <div>
+        <h2>Total Leverage</h2>
+        <p class="what">Embedded transformation across the whole business.</p>
+        <ul>
+          <li>End-to-end growth strategy</li>
+          <li>Business operating system</li>
+          <li>Growth roadmap</li>
+          <li>Systems &amp; reporting</li>
+          <li>Marketing leadership</li>
+          <li>Cross-functional delivery</li>
+        </ul>
+        <p class="outcome">
+          <b>Outcome</b>
+          Several levers pulled together, long enough to change the trajectory
+          of the business. Performance-linked and hybrid arrangements where
+          they make sense.
+        </p>
+      </div>
+    </article>
+
+  </section>
+
+  <section class="argument">
+    <p class="eyebrow">Why the order matters</p>
+    <p class="flow">IN <span>→</span> CR <span>→</span> MN <span>→</span> TL</p>
+    <p>
+      The sequence isn't a menu, it's an argument. Spending on marketing before
+      the pricing is right just buys more customers at the wrong margin — you
+      get busier and no better off.
+    </p>
+    <p>
+      So the work starts with a diagnosis, fixes what the business sells and
+      what it keeps, and only then builds the engine that brings more of it in.
+      Most engagements start at IN for exactly that reason.
+    </p>
+  </section>
+
+  <section class="close">
+    <h2>Start with the diagnosis.</h2>
+    <p>
+      If you know the business could perform better but not which changes would
+      matter most, that's the conversation worth having. It starts with a look
+      at what you've already got.
+    </p>
+    <a class="btn" href="mailto:hello@incrmntl.co">Book an Insight review</a>
+  </section>
+
+  <footer>
+    <p>INCRMNTL — Small changes. Bigger outcomes.</p>
+    <p>incrmntl.co</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
