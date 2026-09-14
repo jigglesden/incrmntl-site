@@ -53,6 +53,7 @@
   .burger .bars { display:grid; gap:3px; }
   .burger .bars i { display:block; width:16px; height:2px; background:var(--ink); }
   .menu { position:absolute; right:0; top:calc(100% + 8px); z-index:20; min-width:210px; background:var(--ground); border:1px solid var(--rule); border-radius:4px; padding:6px; display:grid; box-shadow:0 14px 34px -18px rgba(12,59,50,.5); }
+  .menu[hidden] { display:none; }
   .menu a { font-family:var(--display); font-size:.95rem; font-weight:500; color:var(--ink); text-decoration:none; padding:9px 12px; border-radius:3px; }
   .menu a:hover { background:var(--surface); }
   .menu a[aria-current="page"] { color:var(--muted); }

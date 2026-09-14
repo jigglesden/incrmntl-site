@@ -355,6 +355,7 @@
     display: grid;
     box-shadow: 0 14px 34px -18px rgba(12,59,50,.5);
   }
+  .menu[hidden] { display:none; }
   .menu a {
     font-family: var(--display);
     font-size: .95rem;
@@ -541,5 +542,23 @@
 
 </div>
 
+<script>
+  (function () {
+    var btn = document.getElementById("burger");
+    var menu = document.getElementById("menu");
+    if (!btn || !menu) return;
+    function set(open) {
+      menu.hidden = !open;
+      btn.setAttribute("aria-expanded", String(open));
+    }
+    btn.addEventListener("click", function (e) { e.stopPropagation(); set(menu.hidden); });
+    document.addEventListener("click", function (e) {
+      if (!menu.hidden && !menu.contains(e.target)) set(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !menu.hidden) { set(false); btn.focus(); }
+    });
+  })();
+</script>
 </body>
 </html>
