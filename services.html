@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="What INCRMNTL does itself, what it will get you started on, and where it brings in a specialist instead.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Services, INCRMNTL">
+<meta property="og:description" content="What I do, what I will start, and who I bring in.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://incrmntl.co/services.html">
+<title>Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Literata:opsz,wght@7..72,400;7..72,500&display=swap">
+<style>
+  :root {
+    --ground:#FCFBF7; --surface:#F4F2EA; --ink:#0C3B32; --body:#2C4A43;
+    --muted:#4F6B8A; --rule:#DEDACE; --outcome:#F5A623; --on-accent:#0C3B32;
+    --node-1:#9ACFAE; --node-2:#74B98B; --node-3:#4E9B6A;
+    --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+    --serif:"Literata",Georgia,"Times New Roman",serif;
+    --measure: 62ch;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:#071E1A; --surface:#0C3B32; --ink:#FCFBF7; --body:#CFE0D8;
+      --muted:#9DB6CE; --rule:#17453B; --outcome:#F5A623; --on-accent:#071E1A;
+      --node-1:#3E6E5A; --node-2:#4E9B6A; --node-3:#74B98B;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:#071E1A; --surface:#0C3B32; --ink:#FCFBF7; --body:#CFE0D8;
+    --muted:#9DB6CE; --rule:#17453B; --outcome:#F5A623; --on-accent:#071E1A;
+    --node-1:#3E6E5A; --node-2:#4E9B6A; --node-3:#74B98B;
+  }
+
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--ground); color:var(--body); font-family:var(--serif); font-size:1.0625rem; line-height:1.65; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:1040px; margin:0 auto; padding-inline:24px; }
+  @media (max-width:560px) { .wrap { padding-inline:18px; } }
+  h1, h2, h3, .btn, .burger, .eyebrow { font-family:var(--display); color:var(--ink); text-wrap:balance; }
+
+  header.top { padding-block:28px 0; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .lockup a { display:flex; align-items:center; gap:12px; text-decoration:none; }
+  .lockup svg { width:46px; height:auto; flex:none; }
+  .lockup b { font-family:var(--display); font-weight:700; font-size:1.18rem; color:var(--ink); }
+  @media (min-width:700px) { .lockup svg { width:68px; } .lockup b { font-size:1.42rem; } }
+
+  .navwrap { position:relative; }
+  .burger { display:inline-flex; align-items:center; gap:9px; background:none; border:1px solid var(--rule); border-radius:3px; padding:8px 13px; font-size:.84rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; cursor:pointer; }
+  .burger:focus-visible { outline:3px solid var(--muted); outline-offset:2px; }
+  .burger .bars { display:grid; gap:3px; }
+  .burger .bars i { display:block; width:16px; height:2px; background:var(--ink); }
+  .menu { position:absolute; right:0; top:calc(100% + 8px); z-index:20; min-width:210px; background:var(--ground); border:1px solid var(--rule); border-radius:4px; padding:6px; display:grid; box-shadow:0 14px 34px -18px rgba(12,59,50,.5); }
+  .menu a { font-family:var(--display); font-size:.95rem; font-weight:500; color:var(--ink); text-decoration:none; padding:9px 12px; border-radius:3px; }
+  .menu a:hover { background:var(--surface); }
+  .menu a[aria-current="page"] { color:var(--muted); }
+
+  .hero { padding-block: clamp(34px,5vw,60px) 8px; }
+  .hero h1 { font-size:clamp(2.1rem,1.3rem + 3.2vw,3.4rem); font-weight:700; line-height:1.05; letter-spacing:-.02em; margin:0 0 16px; }
+  .hero h1 .soft { color:var(--muted); font-weight:500; }
+  .lede { font-size:clamp(1.04rem,1rem + .3vw,1.2rem); max-width:var(--measure); margin:0; }
+
+  /* Three depths of involvement, not three products. The bar colour deepens
+     the way the mark does, so "how far in am I" reads before the words do. */
+  .depth { border-top:1px solid var(--rule); padding-block:34px; }
+  .depth h2 { font-size:clamp(1.4rem,1.1rem + 1.4vw,2rem); font-weight:600; letter-spacing:-.015em; margin:0 0 6px; }
+  .depth .eyebrow { font-size:.72rem; font-weight:700; letter-spacing:.15em; text-transform:uppercase; color:var(--muted); margin:0 0 14px; display:flex; align-items:center; gap:10px; }
+  .depth .eyebrow::before { content:""; width:34px; height:8px; border-radius:99px; flex:none; }
+  .d1 .eyebrow::before { background:var(--node-3); }
+  .d2 .eyebrow::before { background:var(--node-2); }
+  .d3 .eyebrow::before { background:var(--outcome); }
+  .depth p { max-width:var(--measure); margin:0 0 14px; }
+  .depth p:last-child { margin-bottom:0; }
+
+  ul.things { list-style:none; margin:0 0 16px; padding:0; display:flex; flex-wrap:wrap; gap:6px; max-width:680px; }
+  ul.things li { font-family:var(--display); font-size:.84rem; font-weight:500; color:var(--body); border:1px solid var(--rule); border-radius:999px; padding:5px 12px; }
+
+  .close { padding-block:clamp(34px,5vw,52px) 0; border-top:1px solid var(--rule); }
+  .close h2 { font-size:clamp(1.6rem,1.2rem + 1.8vw,2.3rem); font-weight:700; letter-spacing:-.02em; margin:0 0 14px; }
+  .close p { max-width:var(--measure); margin:0 0 24px; }
+  .btn { display:inline-block; background:var(--outcome); color:var(--on-accent); font-weight:600; font-size:1rem; text-decoration:none; padding:13px 26px; border-radius:3px; }
+  .btn:hover { filter:brightness(1.06); }
+  .btn:focus-visible { outline:3px solid var(--muted); outline-offset:3px; }
+
+  footer { margin-top:clamp(44px,6vw,72px); border-top:1px solid var(--rule); padding-block:22px 40px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+  footer p { margin:0; font-size:.9rem; color:var(--muted); }
+  footer a { color:var(--muted); }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="top">
+    <div class="lockup">
+      <a href="/">
+        <svg viewBox="0 0 360 220" role="img" aria-label="INCRMNTL">
+          <path d="M45 170 C105 160 125 145 165 125 C205 105 235 95 285 55" fill="none" stroke="#4E9B6A" stroke-width="14" stroke-linecap="round"/>
+          <circle cx="55" cy="168" r="15" fill="#9ACFAE"/>
+          <circle cx="120" cy="148" r="22" fill="#74B98B"/>
+          <circle cx="195" cy="118" r="28" fill="#0C3B32"/>
+          <circle cx="285" cy="55" r="36" fill="#F5A623"/>
+          <line x1="318" y1="28" x2="338" y2="12" stroke="#F5A623" stroke-width="8" stroke-linecap="round"/>
+          <line x1="322" y1="55" x2="347" y2="55" stroke="#F5A623" stroke-width="8" stroke-linecap="round"/>
+          <line x1="307" y1="17" x2="311" y2="0" stroke="#F5A623" stroke-width="8" stroke-linecap="round"/>
+        </svg>
+        <b>INCRMNTL</b>
+      </a>
+    </div>
+    <div class="navwrap">
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">
+        <span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        Menu
+      </button>
+      <nav class="menu" id="menu" hidden>
+        <a href="/">Home</a>
+        <a href="/services.html" aria-current="page">Services</a>
+        <a href="/case-studies.html">Case studies</a>
+        <a href="mailto:hello@incrmntl.co">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Three depths,<br><span class="soft">not a price list.</span></h1>
+    <p class="lede">
+      Most growth problems are not specialist problems. They are decisions
+      nobody has made yet. So the useful question is not which service you are
+      buying, it is how far in I need to be.
+    </p>
+  </section>
+
+  <section class="depth d1">
+    <p class="eyebrow">Where I do the work</p>
+    <h2>Commercial, systems, and how the business runs</h2>
+    <ul class="things">
+      <li>Pricing</li>
+      <li>Offer and packaging</li>
+      <li>Productising a service</li>
+      <li>Margin</li>
+      <li>Operating rhythm</li>
+      <li>Reporting and decision-making</li>
+      <li>Process and systems</li>
+    </ul>
+    <p>
+      This is the part I am actually expert in, and the part most businesses
+      skip because it is invisible from the outside. It is also where the
+      biggest numbers usually are. Changing what you sell and what you keep
+      moves more than changing a headline.
+    </p>
+  </section>
+
+  <section class="depth d2">
+    <p class="eyebrow">Where I get you started</p>
+    <h2>Marketing, website, SEO, email, ads</h2>
+    <ul class="things">
+      <li>Channel strategy</li>
+      <li>Website and landing pages</li>
+      <li>SEO foundations</li>
+      <li>Email and lifecycle</li>
+      <li>Paid search and social</li>
+      <li>Conversion</li>
+    </ul>
+    <p>
+      Plenty of businesses have none of this, or have it badly. Going from
+      nothing to working is not specialist work, and I will do it with you: set
+      the strategy, build the foundations, get something live and measured.
+    </p>
+    <p>
+      I am not going to tell you I am an SEO expert. I run SEO for my own
+      business and I can take yours from nothing to noticeably better. Getting
+      from good to best in any one channel is somebody else's job, and knowing
+      where that line sits is the point of this section.
+    </p>
+  </section>
+
+  <section class="depth d3">
+    <p class="eyebrow">Where I bring in a specialist</p>
+    <h2>Choosing them, briefing them, holding them to it</h2>
+    <p>
+      When a channel genuinely needs an expert, the valuable thing is not
+      pretending to be one. It is knowing that the moment has arrived, picking
+      someone good, writing a brief worth answering, and checking the work
+      against numbers that mean something.
+    </p>
+    <p>
+      I keep a short list of people I would use on my own business, because I
+      do. Email past the basics goes to an agency I have worked with for years.
+      Paid search goes to someone who does nothing else. You get the specialist
+      and someone in your corner who can tell whether they are earning the fee.
+    </p>
+    <p>
+      That is usually the cheapest version of this whole conversation. Most
+      businesses are not underserved by specialists. They are over-sold by
+      them, in the wrong order, before anyone worked out what the actual
+      problem was.
+    </p>
+  </section>
+
+  <section class="close">
+    <h2>Start with the diagnosis.</h2>
+    <p>
+      Which depth you need is itself a question worth answering properly, and
+      it is what the first engagement is for.
+    </p>
+    <a class="btn" href="mailto:hello@incrmntl.co">Book an Insight review</a>
+  </section>
+
+  <footer>
+    <p>INCRMNTL. Small changes. Bigger outcomes.</p>
+    <p><a href="/">incrmntl.co</a></p>
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    var btn = document.getElementById("burger");
+    var menu = document.getElementById("menu");
+    if (!btn || !menu) return;
+    function set(open) {
+      menu.hidden = !open;
+      btn.setAttribute("aria-expanded", String(open));
+    }
+    btn.addEventListener("click", function (e) { e.stopPropagation(); set(menu.hidden); });
+    document.addEventListener("click", function (e) {
+      if (!menu.hidden && !menu.contains(e.target)) set(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !menu.hidden) { set(false); btn.focus(); }
+    });
+  })();
+</script>
+</body>
+</html>
