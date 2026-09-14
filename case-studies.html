@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="What INCRMNTL has actually built: a service turned into an ecommerce product, an operating system for a physical workflow, conversion work that starts with a diagnosis, and a brand and storefront for a New Zealand crayon maker.">
+<meta name="description" content="Three pieces of work: turning a quoted service into a fixed-price product, replacing a paper gown log with an operating system, and costing a crayon properly.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<meta property="og:title" content="Case Studies — INCRMNTL">
-<meta property="og:description" content="What was built, and why.">
+<meta property="og:title" content="Case Studies, INCRMNTL">
+<meta property="og:description" content="What the problem was, what got built, what changed.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://incrmntl.co/case-studies.html">
 <title>Case Studies</title>
@@ -15,137 +15,88 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Literata:opsz,wght@7..72,400;7..72,500&display=swap">
 <style>
   :root {
-    --ground:    #FCFBF7;
-    --surface:   #F4F2EA;
-    --ink:       #0C3B32;
-    --body:      #2C4A43;
-    --muted:     #4F6B8A;
-    --rule:      #DEDACE;
-    --node-1:    #9ACFAE;
-    --node-2:    #74B98B;
-    --node-3:    #4E9B6A;
-    --outcome:   #F5A623;
-    --on-accent: #0C3B32;
-    --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
-    --serif: "Literata", Georgia, "Times New Roman", serif;
-    --step: clamp(1.5rem, 1.1rem + 1.9vw, 2.5rem);
+    --ground:#FCFBF7; --surface:#F4F2EA; --ink:#0C3B32; --body:#2C4A43;
+    --muted:#4F6B8A; --rule:#DEDACE; --outcome:#F5A623; --on-accent:#0C3B32;
+    --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+    --serif:"Literata",Georgia,"Times New Roman",serif;
+    --step: clamp(1.5rem, 1.1rem + 1.9vw, 2.4rem);
     --measure: 62ch;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --ground: #071E1A; --surface: #0C3B32; --ink: #FCFBF7; --body: #CFE0D8;
-      --muted: #9DB6CE; --rule: #17453B;
-      --node-1: #3E6E5A; --node-2: #4E9B6A; --node-3: #74B98B;
-      --outcome: #F5A623; --on-accent: #071E1A;
+      --ground:#071E1A; --surface:#0C3B32; --ink:#FCFBF7; --body:#CFE0D8;
+      --muted:#9DB6CE; --rule:#17453B; --outcome:#F5A623; --on-accent:#071E1A;
     }
   }
   :root[data-theme="dark"] {
-    --ground: #071E1A; --surface: #0C3B32; --ink: #FCFBF7; --body: #CFE0D8;
-    --muted: #9DB6CE; --rule: #17453B;
-    --node-1: #3E6E5A; --node-2: #4E9B6A; --node-3: #74B98B;
-    --outcome: #F5A623; --on-accent: #071E1A;
+    --ground:#071E1A; --surface:#0C3B32; --ink:#FCFBF7; --body:#CFE0D8;
+    --muted:#9DB6CE; --rule:#17453B; --outcome:#F5A623; --on-accent:#071E1A;
   }
 
   * { box-sizing: border-box; }
   body {
-    margin: 0; background: var(--ground); color: var(--body);
-    font-family: var(--serif); font-size: 1.0625rem; line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
+    margin:0; background:var(--ground); color:var(--body);
+    font-family:var(--serif); font-size:1.0625rem; line-height:1.65;
+    -webkit-font-smoothing:antialiased;
   }
-  .wrap { max-width: 1040px; margin: 0 auto; padding-inline: 24px; }
-  @media (max-width: 560px) { .wrap { padding-inline: 18px; } }
+  .wrap { max-width:1040px; margin:0 auto; padding-inline:24px; }
+  @media (max-width:560px) { .wrap { padding-inline:18px; } }
+  h1, h2, h3, .btn, .burger, .label { font-family:var(--display); color:var(--ink); text-wrap:balance; }
 
-  h1, h2, .code, .eyebrow, .btn, .burger { font-family: var(--display); color: var(--ink); text-wrap: balance; }
+  header.top { padding-block:28px 0; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .lockup a { display:flex; align-items:center; gap:12px; text-decoration:none; }
+  .lockup svg { width:46px; height:auto; flex:none; }
+  .lockup b { font-family:var(--display); font-weight:700; font-size:1.18rem; color:var(--ink); }
+  @media (min-width:700px) { .lockup svg { width:68px; } .lockup b { font-size:1.42rem; } }
 
-  header.top {
-    padding-block: 28px 0; display: flex; align-items: center;
-    justify-content: space-between; gap: 16px; flex-wrap: wrap;
-  }
-  .lockup a { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-  .lockup svg { width: 46px; height: auto; flex: none; }
-  .lockup b { font-family: var(--display); font-weight: 700; font-size: 1.18rem; color: var(--ink); }
-  /* Bigger once there is room for it; 46px is right on a phone. */
-  @media (min-width: 700px) { .lockup svg { width: 68px; } }
-  @media (min-width: 700px) { .lockup b { font-size: 1.42rem; } }
+  .navwrap { position:relative; }
+  .burger { display:inline-flex; align-items:center; gap:9px; background:none; border:1px solid var(--rule); border-radius:3px; padding:8px 13px; font-size:.84rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; cursor:pointer; }
+  .burger:focus-visible { outline:3px solid var(--muted); outline-offset:2px; }
+  .burger .bars { display:grid; gap:3px; }
+  .burger .bars i { display:block; width:16px; height:2px; background:var(--ink); }
+  .menu { position:absolute; right:0; top:calc(100% + 8px); z-index:20; min-width:210px; background:var(--ground); border:1px solid var(--rule); border-radius:4px; padding:6px; display:grid; box-shadow:0 14px 34px -18px rgba(12,59,50,.5); }
+  .menu a { font-family:var(--display); font-size:.95rem; font-weight:500; color:var(--ink); text-decoration:none; padding:9px 12px; border-radius:3px; }
+  .menu a:hover { background:var(--surface); }
+  .menu a[aria-current="page"] { color:var(--muted); }
 
-  .navwrap { position: relative; }
-  .burger {
-    display: inline-flex; align-items: center; gap: 9px; background: none;
-    border: 1px solid var(--rule); border-radius: 3px; padding: 8px 13px;
-    font-size: .84rem; font-weight: 600; letter-spacing: .1em;
-    text-transform: uppercase; cursor: pointer;
-  }
-  .burger:focus-visible { outline: 3px solid var(--muted); outline-offset: 2px; }
-  .burger .bars { display: grid; gap: 3px; }
-  .burger .bars i { display: block; width: 16px; height: 2px; background: var(--ink); }
-  .menu {
-    position: absolute; right: 0; top: calc(100% + 8px); z-index: 20;
-    min-width: 210px; background: var(--ground); border: 1px solid var(--rule);
-    border-radius: 4px; padding: 6px; display: grid;
-    box-shadow: 0 14px 34px -18px rgba(12,59,50,.5);
-  }
-  .menu a {
-    font-family: var(--display); font-size: .95rem; font-weight: 500;
-    color: var(--ink); text-decoration: none; padding: 9px 12px; border-radius: 3px;
-  }
-  .menu a:hover { background: var(--surface); }
-  .menu a[aria-current="page"] { color: var(--muted); }
+  .hero { padding-block: clamp(34px,5vw,60px) 12px; }
+  .hero h1 { font-size:clamp(2.1rem,1.3rem + 3.2vw,3.4rem); font-weight:700; line-height:1.05; letter-spacing:-.02em; margin:0 0 16px; }
+  .hero h1 .soft { color:var(--muted); font-weight:500; }
+  .lede { font-size:clamp(1.04rem,1rem + .3vw,1.2rem); max-width:var(--measure); margin:0; }
 
-  .hero { padding-block: clamp(36px, 6vw, 68px) 20px; }
-  .hero h1 {
-    font-size: clamp(2.2rem, 1.3rem + 3.6vw, 3.6rem); font-weight: 700;
-    line-height: 1.04; letter-spacing: -.02em; margin: 0 0 18px;
-  }
-  .hero h1 .soft { color: var(--muted); font-weight: 500; }
-  .lede { font-size: clamp(1.05rem, 1rem + .35vw, 1.24rem); max-width: var(--measure); margin: 0; }
+  .case { border-top:1px solid var(--rule); padding-block:36px; }
+  .case h2 { font-size:var(--step); font-weight:600; letter-spacing:-.015em; line-height:1.12; margin:0 0 4px; }
+  .who { font-family:var(--display); font-size:.73rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:0 0 22px; display:flex; flex-wrap:wrap; gap:6px 14px; align-items:center; }
+  .tag { font-family:var(--display); font-size:.68rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--on-accent); background:var(--outcome); border-radius:999px; padding:3px 10px; }
 
-  .case { border-top: 1px solid var(--rule); padding-block: 32px; }
-  .case h2 {
-    font-size: var(--step); font-weight: 600; letter-spacing: -.015em;
-    line-height: 1.12; margin: 0 0 8px;
-  }
-  .meta {
-    font-family: var(--display); font-size: .73rem; font-weight: 600;
-    letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
-    margin: 0 0 18px; display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center;
-  }
-  .case p { max-width: var(--measure); margin: 0 0 14px; }
-  .case p:last-child { margin-bottom: 0; }
-  .tag {
-    display: inline-block; font-family: var(--display); font-size: .68rem;
-    font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
-    color: var(--on-accent); background: var(--outcome);
-    border-radius: 999px; padding: 3px 10px;
-  }
-  .lever { color: var(--ink); }
+  /* Problem, Built, Result. The same three beats every time, so you can skim
+     one case study or all three the same way. */
+  .beat { display:grid; grid-template-columns:104px 1fr; gap:0 24px; margin-bottom:20px; align-items:start; }
+  @media (max-width:620px) { .beat { grid-template-columns:1fr; gap:4px; } }
+  .label { font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); padding-top:5px; margin:0; }
+  .beat p { margin:0 0 10px; max-width:var(--measure); }
+  .beat div p:last-child { margin-bottom:0; }
 
-  .note {
-    background: var(--surface); border-radius: 4px;
-    padding: clamp(20px, 3vw, 30px); margin-block: 28px 0;
-  }
-  .note p { margin: 0; max-width: var(--measure); }
+  figure { margin:22px 0 0; }
+  figure img { display:block; width:100%; max-width:100%; height:auto; border:1px solid var(--rule); border-radius:4px; background:var(--surface); }
+  figcaption { font-family:var(--display); font-size:.8rem; color:var(--muted); margin-top:8px; line-height:1.45; }
+  .shots { display:grid; gap:18px; grid-template-columns:1fr 1fr; margin-top:22px; }
+  @media (max-width:720px) { .shots { grid-template-columns:1fr; } }
+  .shots figure { margin:0; }
 
-  .close { padding-block: clamp(34px, 5vw, 56px) 0; }
-  .close h2 {
-    font-size: clamp(1.6rem, 1.2rem + 1.8vw, 2.4rem); font-weight: 700;
-    letter-spacing: -.02em; margin: 0 0 14px;
-  }
-  .close p { max-width: var(--measure); margin: 0 0 24px; }
-  .btn {
-    display: inline-block; background: var(--outcome); color: var(--on-accent);
-    font-weight: 600; font-size: 1rem; text-decoration: none;
-    padding: 13px 26px; border-radius: 3px;
-  }
-  .btn:hover { filter: brightness(1.06); }
-  .btn:focus-visible { outline: 3px solid var(--muted); outline-offset: 3px; }
+  .note { background:var(--surface); border-radius:4px; padding:clamp(20px,3vw,28px); margin-top:34px; }
+  .note p { margin:0; max-width:var(--measure); }
 
-  footer {
-    margin-top: clamp(44px, 6vw, 80px); border-top: 1px solid var(--rule);
-    padding-block: 22px 40px; display: flex; justify-content: space-between;
-    gap: 12px; flex-wrap: wrap;
-  }
-  footer p { margin: 0; font-size: .9rem; color: var(--muted); }
-  footer a { color: var(--muted); }
+  .close { padding-block:clamp(34px,5vw,52px) 0; }
+  .close h2 { font-size:clamp(1.6rem,1.2rem + 1.8vw,2.3rem); font-weight:700; letter-spacing:-.02em; margin:0 0 14px; }
+  .close p { max-width:var(--measure); margin:0 0 24px; }
+  .btn { display:inline-block; background:var(--outcome); color:var(--on-accent); font-weight:600; font-size:1rem; text-decoration:none; padding:13px 26px; border-radius:3px; }
+  .btn:hover { filter:brightness(1.06); }
+  .btn:focus-visible { outline:3px solid var(--muted); outline-offset:3px; }
+
+  footer { margin-top:clamp(44px,6vw,72px); border-top:1px solid var(--rule); padding-block:22px 40px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+  footer p { margin:0; font-size:.9rem; color:var(--muted); }
+  footer a { color:var(--muted); }
 </style>
 </head>
 <body>
@@ -182,135 +133,205 @@
   </header>
 
   <section class="hero">
-    <h1>What was built,<br><span class="soft">and why.</span></h1>
+    <h1>The problem, what got<br><span class="soft">built, what changed.</span></h1>
     <p class="lede">
-      Four pieces of work, described plainly. No percentages, because you
-      can't check them from here and I'd rather show you the reasoning.
+      Three pieces of work. Real screens, not mockups. Customer names and
+      client cost data are blurred, everything else is as it runs.
     </p>
   </section>
 
   <section aria-label="Case studies">
 
     <article class="case">
-      <h2>A service, turned into a product</h2>
-      <p class="meta"><span>MyDressbox</span><span class="lever">Productisation</span><span>CR</span></p>
-      <p>
-        Wedding dress cleaning is a quoted service. You ring a dry cleaner,
-        they look at the gown, they name a price. That caps you at the
-        customers near you and makes every sale a conversation.
-      </p>
-      <p>
-        MyDressbox sells the same work as five fixed prices, bought online like
-        any other product, with the box posted out. The tier keys off the gown
-        itself - style, length, circumference, volume, detailing - so the price
-        can be set before anyone has seen it.
-      </p>
-      <p>
-        The hard part was never the website. It was deciding what varies and
-        what doesn't, then being willing to fix a price on something you
-        haven't inspected. That is the productisation question in every service
-        business, and it is almost always a commercial decision wearing an
-        operational disguise.
-      </p>
+      <h2>Selling a quote as a product</h2>
+      <p class="who"><span>MyDressbox</span><span>Product strategy</span><span>CR</span></p>
+
+      <div class="beat">
+        <p class="label">Problem</p>
+        <div>
+          <p>
+            Getting a wedding dress cleaned meant carrying it round town. Three
+            dry cleaners, three counters, three people looking at it and naming
+            a different price. Nobody could buy without a conversation, and
+            nobody could buy at all unless they lived near a cleaner who would
+            touch bridal.
+          </p>
+        </div>
+      </div>
+
+      <div class="beat">
+        <p class="label">Built</p>
+        <div>
+          <p>
+            Five fixed prices, $299 to $599, bought online like anything else.
+            The box arrives at her door, the gown goes back in it, it comes
+            home cleaned and boxed.
+          </p>
+        </div>
+      </div>
+
+      <div class="beat">
+        <p class="label">The point</p>
+        <div>
+          <p>
+            The tier keys off the gown, not the dirt. Style, length,
+            circumference, volume, detailing. That is what makes a price
+            quotable from a photo instead of a counter, and it is what turned a
+            local service into one that sells to the whole country.
+          </p>
+          <p>
+            The hard part was never the website. It was deciding what varies
+            and what does not, then being willing to fix a price on a gown
+            nobody has seen yet.
+          </p>
+        </div>
+      </div>
     </article>
 
     <article class="case">
-      <h2>An operating system for a physical workflow</h2>
-      <p class="meta"><span>MyDressbox</span><span class="lever">Dress|OS</span><span>TL</span></p>
-      <p>
-        Gowns moved through the laundry on a paper log. Nobody could say where
-        a particular dress was without walking the floor, and how long each
-        stage actually took was recorded nowhere.
-      </p>
-      <p>
-        Dress|OS replaced it. Eleven stages, a scanner that advances a gown
-        rather than merely finding it, timers on the benches where the work
-        happens, photographs at the points where evidence matters later. The
-        people doing the work maintain their own procedures in the app, without
-        waiting on a developer.
-      </p>
-      <p>
-        The output that matters isn't the software, it's the measurements -
-        what a gown really costs in minutes, where the queue backs up, which
-        quality step is leaking. You cannot improve a process nobody has ever
-        timed, and most businesses this size have never timed one.
-      </p>
-    </article>
+      <h2>Dress|OS</h2>
+      <p class="who"><span>MyDressbox</span><span>Systems</span><span>TL</span></p>
 
-    <article class="case">
-      <h2>Conversion work that starts with a diagnosis</h2>
-      <p class="meta"><span>MyDressbox</span><span class="lever">CRO</span><span>MN</span></p>
-      <p>
-        Two storefronts across Australia and New Zealand: location pages,
-        product pages, paid landing pages, and the tracking underneath them.
-      </p>
-      <p>
-        The part worth stealing is the order of operations. Before changing a
-        page, establish whether the page is the problem. Cold traffic arriving
-        with the wrong intent is not fixed by a better headline, and a tracking
-        setup that double counts will have you optimising toward a number that
-        isn't real. Both turned up here. Neither would have been visible to
-        anyone briefed to "improve conversion".
-      </p>
+      <div class="beat">
+        <p class="label">Problem</p>
+        <div>
+          <p>
+            Gowns moved through the laundry on a paper log. Nobody could say
+            where a dress was without walking the floor. How long each stage
+            took was written down nowhere. Several subscriptions were each
+            doing part of the job and none of them talked to each other.
+          </p>
+        </div>
+      </div>
+
+      <div class="beat">
+        <p class="label">Method</p>
+        <div>
+          <p>
+            Scoped the process that already existed, on the floor, with the
+            people running it. Documented it as eleven stages. Built it.
+            Connected the systems already being paid for, Shopify, AusPost,
+            Supabase, Google. Cancelled what the build replaced.
+          </p>
+        </div>
+      </div>
+
+      <div class="shots">
+        <figure>
+          <img src="/img/dos-queue.jpg" alt="Dress OS stage queue listing gowns waiting for a collection box, each tagged with its pricing tier" loading="lazy" width="1097" height="1092">
+          <figcaption>Stage one. Every gown waiting on a box, tagged with the tier that decides which box goes out. Tick several, send them together.</figcaption>
+        </figure>
+        <figure>
+          <img src="/img/dos-gown.jpg" alt="Dress OS gown screen showing the eleven stage pipeline and the steps for the current stage" loading="lazy" width="1097" height="640">
+          <figcaption>One gown. Where it sits in the eleven stages, what it has picked up so far, what this bench is meant to do with it.</figcaption>
+        </figure>
+      </div>
+
+      <figure>
+        <img src="/img/dos-sops.jpg" alt="Dress OS ops screen for editing operator steps at each stage, with live gown counts across all eleven stages" loading="lazy" width="1097" height="1035">
+        <figcaption>The procedure lives in the app. Ops rewrites a stage and the floor sees it on the next page load. No release, nobody re-sending a document.</figcaption>
+      </figure>
+
+      <div class="beat" style="margin-top:24px">
+        <p class="label">Result</p>
+        <div>
+          <p>
+            The floor runs off phones. Queue counts are live across all eleven
+            stages. Every stage with real work in it is timed, so there is
+            finally an answer to what a gown costs in minutes.
+          </p>
+          <p>
+            The software is not the output. The measurements are. You cannot
+            fix a process nobody has ever timed.
+          </p>
+        </div>
+      </div>
     </article>
 
     <article class="case">
       <h2>Cognito Crayons</h2>
-      <p class="meta"><span class="tag">In progress</span><span class="lever">Branding · Website · GTM</span><span>TL</span></p>
-      <p>
-        A hexagonal crayon, hand poured in small batches in New Zealand. Six
-        flat sides, twenty millimetres across, so it stays where a small child
-        puts it. Brand, storefront and route to market.
-      </p>
-      <p>
-        Two buyers with equal weight and nothing in common. A parent arrives
-        from social with ninety seconds and needs to believe the colour is
-        strong and the stick survives a fist. A teacher arrives needing
-        something requisitionable: a price break, a printable programme, a GST
-        invoice. One store, two paths, neither diluted into a compromise that
-        serves nobody.
-      </p>
-      <p>
-        The brand's sharpest decision was a list of banned words. Natural,
-        plant based, food grade, edible - the entire vocabulary the category
-        reaches for by reflex. They invite a parent to think of a crayon as
-        food, which is the wrong thought about a thing a toddler will
-        absolutely put in their mouth. The line is that it is certified non
-        toxic and boring enough that it won't stay there. It is a drawing tool,
-        not a snack.
-      </p>
-      <p>
-        Built on Shopify, synced from Git, with the conversion rules written
-        into the brief rather than left to taste: one primary action per
-        screen, objections answered in the order people actually raise them,
-        and every unanswered question left visible in square brackets instead
-        of quietly invented.
-      </p>
+      <p class="who"><span class="tag">In progress</span><span>Costing, brand, storefront</span><span>TL</span></p>
+
+      <div class="beat">
+        <p class="label">Problem</p>
+        <div>
+          <p>
+            A crayon manufacturer with 64 recipes and no reliable idea what any
+            of them cost to make. Pricing came off a spreadsheet several people
+            had edited over several years. Ingredients, labour and overhead all
+            sat apart, so nobody could answer the only question that matters.
+            What does one crayon cost.
+          </p>
+        </div>
+      </div>
+
+      <div class="beat">
+        <p class="label">Built</p>
+        <div>
+          <p>
+            Cray|OS. Ingredients at their real prices, labour rates by task,
+            overhead, and a recipe builder that puts the three together. Change
+            an ingredient price and every recipe using it moves.
+          </p>
+        </div>
+      </div>
+
+      <div class="shots">
+        <figure>
+          <img src="/img/crayos-list.jpg" alt="Cray OS recipe list showing 64 recipes filterable by range, shape and brand" loading="lazy" width="1097" height="1092">
+          <figcaption>64 recipes, filterable by range, shape and brand. Names and codes blurred, they belong to the client.</figcaption>
+        </figure>
+        <figure>
+          <img src="/img/crayos-cost.jpg" alt="Cray OS recipe cost build up: ingredients and batch weight, then batch yield, then time, labour and reject rate" loading="lazy" width="1096" height="780">
+          <figcaption>One recipe costed properly. Ingredients build the batch, batch yield gives cost per crayon, then setup, manufacture, QC and reject rate go on top. Costs blurred.</figcaption>
+        </figure>
+      </div>
+
+      <div class="beat" style="margin-top:24px">
+        <p class="label">Also</p>
+        <div>
+          <p>
+            Brand and a Shopify storefront alongside it, built for two buyers
+            with nothing in common. A parent arrives from social with ninety
+            seconds and needs to believe the colour is strong and the stick
+            survives a fist. A teacher needs something requisitionable: a price
+            break, a printable programme, a GST invoice.
+          </p>
+          <p>
+            The sharpest call in the brand was a list of banned words. Natural,
+            plant based, food grade, edible. The whole vocabulary the category
+            reaches for by reflex, and every one of them invites a parent to
+            think of a crayon as food. It is certified non toxic and boring
+            enough that it will not stay in a mouth. A drawing tool, not a
+            snack.
+          </p>
+        </div>
+      </div>
     </article>
 
   </section>
 
   <section class="note">
     <p>
-      <strong>On the absent numbers.</strong> Several of these produced results
-      I'm confident about and happy to talk through with the workings. What I
-      won't do is print a percentage on a page where you have no way to check
-      it. If a consultancy's case studies are all round numbers pointing up and
-      to the right, ask them the same question.
+      <strong>No percentages here.</strong> Some of this moved numbers I am
+      happy to take you through with the working. I am not going to print a
+      figure on a web page you have no way of checking. If a consultancy's case
+      studies are all round numbers pointing up and to the right, ask them the
+      same question.
     </p>
   </section>
 
   <section class="close">
     <h2>Start with the diagnosis.</h2>
     <p>
-      If the useful part above was the reasoning rather than the result, that's
-      the part worth buying.
+      If the useful part above was the reasoning rather than the result, that
+      is the part worth buying.
     </p>
     <a class="btn" href="mailto:hello@incrmntl.co">Book an Insight review</a>
   </section>
 
   <footer>
-    <p>INCRMNTL — Small changes. Bigger outcomes.</p>
+    <p>INCRMNTL. Small changes. Bigger outcomes.</p>
     <p><a href="/">incrmntl.co</a></p>
   </footer>
 
