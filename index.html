@@ -316,6 +316,55 @@
     flex-wrap: wrap;
   }
   footer p { margin: 0; font-size: .9rem; color: var(--muted); }
+
+  /* ---------- nav ---------- */
+  .navwrap { position: relative; }
+  .burger {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: none;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 8px 13px;
+    font-family: var(--display);
+    font-size: .84rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .burger:focus-visible { outline: 3px solid var(--muted); outline-offset: 2px; }
+  .burger .bars { display: grid; gap: 3px; }
+  .burger .bars i { display: block; width: 16px; height: 2px; background: var(--ink); }
+
+  .menu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    z-index: 20;
+    min-width: 210px;
+    background: var(--ground);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 6px;
+    display: grid;
+    box-shadow: 0 14px 34px -18px rgba(12,59,50,.5);
+  }
+  .menu a {
+    font-family: var(--display);
+    font-size: .95rem;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+    padding: 9px 12px;
+    border-radius: 3px;
+  }
+  .menu a:hover { background: var(--surface); }
+  .menu a[aria-current="page"] { color: var(--muted); }
+  .menu a:focus-visible { outline: 2px solid var(--muted); outline-offset: -2px; }
+
 </style>
 </head>
 <body>
@@ -336,7 +385,17 @@
       </svg>
       <b>INCRMNTL</b>
     </div>
-    <p class="eyebrow">Growth &amp; transformation</p>
+    <div class="navwrap">
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">
+        <span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        Menu
+      </button>
+      <nav class="menu" id="menu" hidden>
+        <a href="/" aria-current="page">Services</a>
+        <a href="/case-studies.html">Case studies</a>
+        <a href="mailto:hello@incrmntl.co">Get in touch</a>
+      </nav>
+    </div>
   </header>
 
   <section class="hero">
