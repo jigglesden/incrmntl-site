@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="James Igglesden, the person behind INCRMNTL. Twenty-eight years inside businesses that had to grow, from a first IT firm to Triodent, Dentsply Sirona, Bluelab and MyDressbox.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Experience, INCRMNTL">
+<meta property="og:description" content="Built from the inside, not the sidelines.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://incrmntl.co/experience.html">
+<meta property="og:site_name" content="INCRMNTL">
+<meta property="og:image" content="https://incrmntl.co/img/og-home.png">
+<meta property="og:image:secure_url" content="https://incrmntl.co/img/og-home.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="INCRMNTL. How big change actually happens.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Experience, INCRMNTL">
+<meta name="twitter:description" content="Built from the inside, not the sidelines.">
+<meta name="twitter:image" content="https://incrmntl.co/img/og-home.png">
+<title>Experience</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Literata:opsz,wght@7..72,400;7..72,500&display=swap">
+<style>
+  :root {
+    --ground:#FCFBF7; --surface:#F4F2EA; --ink:#0C3B32; --body:#2C4A43;
+    --muted:#4F6B8A; --rule:#DEDACE; --outcome:#F5A623; --on-accent:#0C3B32;
+    --node-1:#9ACFAE; --node-2:#74B98B; --node-3:#4E9B6A;
+    --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+    --serif:"Literata",Georgia,"Times New Roman",serif;
+    --measure: 62ch;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:#071E1A; --surface:#0C3B32; --ink:#FCFBF7; --body:#CFE0D8;
+      --muted:#9DB6CE; --rule:#17453B; --outcome:#F5A623; --on-accent:#071E1A;
+      --node-1:#3E6E5A; --node-2:#4E9B6A; --node-3:#74B98B;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:#071E1A; --surface:#0C3B32; --ink:#FCFBF7; --body:#CFE0D8;
+    --muted:#9DB6CE; --rule:#17453B; --outcome:#F5A623; --on-accent:#071E1A;
+    --node-1:#3E6E5A; --node-2:#4E9B6A; --node-3:#74B98B;
+  }
+
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--ground); color:var(--body); font-family:var(--serif); font-size:1.0625rem; line-height:1.65; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:1040px; margin:0 auto; padding-inline:24px; }
+  @media (max-width:560px) { .wrap { padding-inline:18px; } }
+  h1, h2, h3, .btn, .burger, .eyebrow { font-family:var(--display); color:var(--ink); text-wrap:balance; }
+
+  header.top { padding-block:28px 0; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .lockup a { display:flex; align-items:center; gap:12px; text-decoration:none; }
+  .lockup svg { width:46px; height:auto; flex:none; }
+  .lockup b { font-family:var(--display); font-weight:700; font-size:1.18rem; color:var(--ink); }
+  @media (min-width:700px) { .lockup svg { width:68px; } .lockup b { font-size:1.42rem; } }
+
+  .navwrap { position:relative; }
+  .burger { display:inline-flex; align-items:center; gap:9px; background:none; border:1px solid var(--rule); border-radius:3px; padding:8px 13px; font-size:.84rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; cursor:pointer; }
+  .burger:focus-visible { outline:3px solid var(--muted); outline-offset:2px; }
+  .burger .bars { display:grid; gap:3px; }
+  .burger .bars i { display:block; width:16px; height:2px; background:var(--ink); }
+  .menu { position:absolute; right:0; top:calc(100% + 8px); z-index:20; min-width:210px; background:var(--ground); border:1px solid var(--rule); border-radius:4px; padding:6px; display:grid; box-shadow:0 14px 34px -18px rgba(12,59,50,.5); }
+  .menu[hidden] { display:none; }
+  .menu a { font-family:var(--display); font-size:.95rem; font-weight:500; color:var(--ink); text-decoration:none; padding:9px 12px; border-radius:3px; }
+  .menu a:hover { background:var(--surface); }
+  .menu a[aria-current="page"] { color:var(--muted); }
+
+  .hero { padding-block: clamp(34px,5vw,60px) 8px; }
+  .hero .name { font-family:var(--display); font-size:.78rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin:0 0 12px; }
+  .hero h1 { font-size:clamp(2.1rem,1.3rem + 3.2vw,3.4rem); font-weight:700; line-height:1.05; letter-spacing:-.02em; margin:0 0 16px; }
+  .hero h1 .soft { color:var(--muted); font-weight:500; }
+  .lede { font-size:clamp(1.04rem,1rem + .3vw,1.2rem); max-width:var(--measure); margin:0 0 24px; }
+
+  .li { display:inline-flex; align-items:center; gap:10px; font-family:var(--display); font-weight:600; font-size:.95rem; color:var(--ink); text-decoration:none; border:1px solid var(--rule); border-radius:3px; padding:10px 16px; }
+  .li svg { width:18px; height:18px; flex:none; fill:currentColor; }
+  .li:hover { background:var(--surface); }
+  .li:focus-visible { outline:3px solid var(--muted); outline-offset:2px; }
+
+  /* The numbers. Amber means the outcome in the mark, so it only ever marks a
+     result here, as the node beside each figure. */
+  .proof { display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-block:clamp(36px,5vw,56px) 8px; border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); }
+  @media (max-width:820px) { .proof { grid-template-columns:1fr 1fr; } }
+  .proof div { padding:22px 18px 22px 0; }
+  .proof b { display:flex; align-items:center; gap:10px; font-family:var(--display); font-weight:700; font-size:clamp(1.7rem,1.2rem + 1.6vw,2.4rem); color:var(--ink); letter-spacing:-.02em; line-height:1.1; margin-bottom:6px; }
+  .proof b::before { content:""; width:10px; height:10px; border-radius:50%; background:var(--outcome); flex:none; }
+  .proof span { display:block; font-size:.92rem; line-height:1.45; color:var(--body); max-width:26ch; }
+
+  .thread { background:var(--surface); border-radius:4px; padding:clamp(22px,3.5vw,36px); margin-block:clamp(28px,4vw,44px); }
+  .thread p { margin:0; max-width:var(--measure); font-size:1.1rem; }
+  .thread p + p { margin-top:12px; }
+  .eyebrow { font-size:.72rem; font-weight:700; letter-spacing:.15em; text-transform:uppercase; color:var(--muted); margin:0 0 10px; }
+
+  /* The career, grouped into four stretches. The rail colour deepens down the
+     page, oldest at the bottom, so it reads the same way the mark climbs. */
+  .era { padding-block:30px 6px; border-top:1px solid var(--rule); }
+  .era h2 { font-size:clamp(1.3rem,1.1rem + 1vw,1.75rem); font-weight:600; letter-spacing:-.015em; margin:0 0 18px; display:flex; align-items:center; gap:12px; }
+  .era h2::before { content:""; width:34px; height:8px; border-radius:99px; flex:none; background:var(--rail); }
+  .e1 { --rail:var(--outcome); }
+  .e2 { --rail:var(--node-3); }
+  .e3 { --rail:var(--node-2); }
+  .e4 { --rail:var(--node-1); }
+
+  .role { display:grid; grid-template-columns:150px 1fr; gap:0 28px; padding-block:14px 18px; }
+  .role + .role { border-top:1px dashed var(--rule); }
+  @media (max-width:620px) { .role { grid-template-columns:1fr; gap:2px; } }
+  .when { font-family:var(--display); font-size:.8rem; font-weight:600; letter-spacing:.06em; color:var(--muted); padding-top:4px; margin:0; }
+  .role h3 { font-size:1.12rem; font-weight:600; margin:0; line-height:1.3; }
+  .role .org { font-family:var(--display); font-size:.9rem; font-weight:500; color:var(--muted); margin:2px 0 8px; }
+  .role p.d { margin:0; max-width:var(--measure); }
+
+  .close { padding-block:clamp(34px,5vw,52px) 0; border-top:1px solid var(--rule); margin-top:24px; }
+  .close h2 { font-size:clamp(1.6rem,1.2rem + 1.8vw,2.3rem); font-weight:700; letter-spacing:-.02em; margin:0 0 14px; }
+  .close p { max-width:var(--measure); margin:0 0 24px; }
+  .actions { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+  .btn { display:inline-block; background:var(--outcome); color:var(--on-accent); font-weight:600; font-size:1rem; text-decoration:none; padding:13px 26px; border-radius:3px; }
+  .btn:hover { filter:brightness(1.06); }
+  .btn:focus-visible { outline:3px solid var(--muted); outline-offset:3px; }
+
+  footer { margin-top:clamp(44px,6vw,72px); border-top:1px solid var(--rule); padding-block:22px 40px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+  footer p { margin:0; font-size:.9rem; color:var(--muted); }
+  footer a { color:var(--muted); }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-19EDGKR2MZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-19EDGKR2MZ');
+</script>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="top">
+    <div class="lockup">
+      <a href="/">
+        <svg viewBox="0 0 360 220" role="img" aria-label="INCRMNTL">
+          <path d="M45 170 C105 160 125 145 165 125 C205 105 235 95 285 55" fill="none" stroke="#4E9B6A" stroke-width="14" stroke-linecap="round"/>
+          <circle cx="55" cy="168" r="15" fill="#9ACFAE"/>
+          <circle cx="120" cy="148" r="22" fill="#74B98B"/>
+          <circle cx="195" cy="118" r="28" fill="#0C3B32"/>
+          <circle cx="285" cy="55" r="36" fill="#F5A623"/>
+          <line x1="318" y1="28" x2="338" y2="12" stroke="#F5A623" stroke-width="8" stroke-linecap="round"/>
+          <line x1="322" y1="55" x2="347" y2="55" stroke="#F5A623" stroke-width="8" stroke-linecap="round"/>
+          <line x1="307" y1="17" x2="311" y2="0" stroke="#F5A623" stroke-width="8" stroke-linecap="round"/>
+        </svg>
+        <b>INCRMNTL</b>
+      </a>
+    </div>
+    <div class="navwrap">
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">
+        <span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        Menu
+      </button>
+      <nav class="menu" id="menu" hidden>
+        <a href="/">Home</a>
+        <a href="/services.html">Services</a>
+        <a href="/case-studies.html">Case studies</a>
+        <a href="/experience.html" aria-current="page">Experience</a>
+        <a href="mailto:hello@incrmntl.co">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <p class="name">James Igglesden, Tauranga</p>
+    <h1>Built from the inside,<br><span class="soft">not the sidelines.</span></h1>
+    <p class="lede">
+      Twenty-eight years inside businesses that had to grow. Owning the
+      pricing, the marketing, the team and, more than once, the payroll.
+      INCRMNTL is that experience, offered to other businesses.
+    </p>
+    <a class="li" href="https://www.linkedin.com/in/jamesigglesden" rel="noopener" target="_blank">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+      View my LinkedIn profile
+    </a>
+  </section>
+
+  <section class="proof" aria-label="Results">
+    <div><b>300%</b><span>revenue growth in twelve months at Triodent, after a pricing overhaul</span></div>
+    <div><b>10 to 100+</b><span>staff at Triodent while I ran marketing</span></div>
+    <div><b>2x</b><span>flagship range revenue, to around $40m, after cutting 60% of SKUs</span></div>
+    <div><b>120+</b><span>clients in my first business, from a single customer</span></div>
+  </section>
+
+  <section class="thread">
+    <p class="eyebrow">The thread</p>
+    <p>
+      Different industries, the same work. Dental devices, horticulture
+      technology, marketing software, bridal aftercare. Each time the lever
+      that moved the most was one nobody outside could see: a price, a
+      product line that had to go, a process that had never been measured.
+    </p>
+    <p>
+      Finding that lever, then pulling it properly, is what I have always
+      been paid for.
+    </p>
+  </section>
+
+  <section class="era e1">
+    <h2>Now</h2>
+
+    <div class="role">
+      <p class="when">2019 to now</p>
+      <div>
+        <h3>Co-founder</h3>
+        <p class="org">MyDressbox, Australia and New Zealand</p>
+        <p class="d">
+          Mail-in bridal gown aftercare, spun out of our bridal shop in New
+          Zealand and launched in Australia in 2019. Ten staff, two entities,
+          and a P&amp;L I answer for. Most of what INCRMNTL sells was worked out
+          here first.
+        </p>
+      </div>
+    </div>
+
+    <div class="role">
+      <p class="when">Now</p>
+      <div>
+        <h3>Fractional Growth and Commercial Director</h3>
+        <p class="org">INCRMNTL</p>
+        <p class="d">
+          Pricing, offers, packaging, margin, and the systems that show whether
+          any of it worked, for businesses that know they could perform better
+          but not which change matters most.
+        </p>
+      </div>
+    </div>
+
+    <div class="role">
+      <p class="when">2025 to now</p>
+      <div>
+        <h3>Advisor, Head of Partnerships</h3>
+        <p class="org">ListMe, New Zealand</p>
+        <p class="d">
+          A fractional role building partnerships with real estate agents and
+          agencies to take a New Zealand proptech platform national.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="era e2">
+    <h2>Commercial leadership</h2>
+
+    <div class="role">
+      <p class="when">2022 to 2024</p>
+      <div>
+        <h3>Head of Global Marketing</h3>
+        <p class="org">Bluelab, Tauranga</p>
+        <p class="d">
+          Owned global marketing against revenue rather than activity. Moved
+          Amazon from Vendor Central to Seller Central for control and margin,
+          stabilised and enforced RRP and MAP pricing in the US, and rebuilt
+          underperforming marketplace channels with reporting that showed what
+          was working.
+        </p>
+      </div>
+    </div>
+
+    <div class="role">
+      <p class="when">2019</p>
+      <div>
+        <h3>Business Development Manager, Consumables</h3>
+        <p class="org">Dentsply Sirona, Melbourne</p>
+      </div>
+    </div>
+
+    <div class="role">
+      <p class="when">2017 to 2019</p>
+      <div>
+        <h3>Commercial Manager</h3>
+        <p class="org">DEC International NZ, Waikato</p>
+        <p class="d">
+          Led sales, marketing and customer service, and set the strategy for
+          growing with existing and new customers.
+        </p>
+      </div>
+    </div>
+
+    <div class="role">
+      <p class="when">2013 to 2017</p>
+      <div>
+        <h3>Manager Global Accessories, and Sales and Marketing Manager</h3>
+        <p class="org">Dentsply Sirona, Bay of Plenty</p>
+        <p class="d">
+          Stayed on after Dentsply Sirona acquired Triodent. Brand manager for
+          the Triodent, Palodent and Automatrix matrix systems: product
+          concepts, pricing, positioning and portfolio management alongside
+          global R&amp;D, clinical research and sales.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="era e3">
+    <h2>Scale-up</h2>
+
+    <div class="role">
+      <p class="when">2011 to 2013</p>
+      <div>
+        <h3>Managing Director</h3>
+        <p class="org">evoSuite</p>
+        <p class="d">
+          Repositioned a tourism booking tool as a broader marketing automation
+          platform, and worked with MBIE to bring in UCLA for a thesis
+          supporting a US launch.
+        </p>
+      </div>
+    </div>
+
+    <div class="role">
+      <p class="when">2007 to 2011</p>
+      <div>
+        <h3>Marketing Director, then Non-executive Director</h3>
+        <p class="org">Triodent</p>
+        <p class="d">
+          The company grew from ten staff to over a hundred. Built a sales and
+          marketing team of more than twenty and a new brand, and led a pricing
+          overhaul that protected the business from a strong US dollar and
+          contributed to 300% revenue growth in twelve months.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="era e4">
+    <h2>Where it started</h2>
+
+    <div class="role">
+      <p class="when">2004 to 2006</p>
+      <div>
+        <h3>Sales and Marketing Manager</h3>
+        <p class="org">RéserveGroup</p>
+      </div>
+    </div>
+
+    <div class="role">
+      <p class="when">2001 to 2004</p>
+      <div>
+        <h3>Owner</h3>
+        <p class="org">LP&amp;G Consultants</p>
+        <p class="d">
+          My first business. An IT firm grown from its first customer to more
+          than 120 clients.
+        </p>
+      </div>
+    </div>
+
+    <div class="role">
+      <p class="when">1998 to 2001</p>
+      <div>
+        <h3>Technical Manager</h3>
+        <p class="org">Millennium Technology, Tauranga</p>
+        <p class="d">
+          Overhauled sales and quoting in three months. Department revenue and
+          output went up with no extra payroll, and overtime went away.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="era e4">
+    <h2>Education</h2>
+
+    <div class="role">
+      <p class="when">2010</p>
+      <div>
+        <h3>Entrepreneurship Development Program</h3>
+        <p class="org">MIT Sloan School of Management</p>
+        <p class="d">
+          Sponsored by the New Zealand Government. Entrepreneurship, funding,
+          value and scale.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="close">
+    <h2>Start with the diagnosis.</h2>
+    <p>
+      If this is the kind of experience your business could use, the first
+      conversation is about what you have already got.
+    </p>
+    <div class="actions">
+      <a class="btn" href="mailto:hello@incrmntl.co">Book an Insight review</a>
+      <a class="li" href="https://www.linkedin.com/in/jamesigglesden" rel="noopener" target="_blank">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>INCRMNTL. How big change actually happens.</p>
+    <p><a href="/">incrmntl.co</a></p>
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    var btn = document.getElementById("burger");
+    var menu = document.getElementById("menu");
+    if (!btn || !menu) return;
+    function set(open) {
+      menu.hidden = !open;
+      btn.setAttribute("aria-expanded", String(open));
+    }
+    btn.addEventListener("click", function (e) { e.stopPropagation(); set(menu.hidden); });
+    document.addEventListener("click", function (e) {
+      if (!menu.hidden && !menu.contains(e.target)) set(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !menu.hidden) { set(false); btn.focus(); }
+    });
+  })();
+</script>
+</body>
+</html>
